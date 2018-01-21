@@ -4,6 +4,10 @@ from __future__ import unicode_literals
 
 import sys,os
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 import xbmc
 from xbmcgui import ListItem
 from xbmcplugin import addDirectoryItem, endOfDirectory
