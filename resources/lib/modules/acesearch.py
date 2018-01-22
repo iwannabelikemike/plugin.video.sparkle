@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup as bss
 
 SEARCH_URL = 'https://acestreamsearch.com/en/'
-CHANNELS_URL = 'http://acestreamchannel.blogspot.com/'
+CHANNELS_URL = 'http://acestreamchannel.blogspot.co.uk/'
 
 def acesearch(term):
     """
