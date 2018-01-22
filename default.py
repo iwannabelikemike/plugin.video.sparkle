@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 
 import sys,os
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 import xbmc
 from xbmcgui import ListItem
