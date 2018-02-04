@@ -40,10 +40,11 @@ class subreddits(object):
             if hasattr(c, 'body'):
                 linkline = re.findall(self.newregex, c.body.encode('utf-8'))
                 if linkline:
-                    findstr = linkline.split('acestream://')
-                    links.append({'quality': re.sub('[^A-Za-z0-9 ]', '', findstr[0]).strip(),
-                                  'comment_id': c.id,
-                                  'score': c.score,
-                                  'ace_links': findstr[1]})
+                    for x in range(0, len(linkline)):
+                        findstr = linkline[x].split('acestream://')
+                        links.append({'quality': re.sub('[^A-Za-z0-9 ]', '', findstr[0]).strip(),
+                                      'comment_id': c.id,
+                                      'score': c.score,
+                                      'ace_links': findstr[1]})
         # Return the list sorted by score
         return sorted(links, key=lambda d: d['score'], reverse=True)
