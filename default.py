@@ -79,7 +79,7 @@ def show_event(submission_id):
                 addDirectoryItem(
                     plugin.handle,
                     url,
-                    ListItem("{} ({} upvotes)".format(a, l['score'])), True)
+                    ListItem("{} - Quality: {} ({} upvotes)".format(a, l['quality'], l['score'])), True)
     endOfDirectory(plugin.handle)
 
 @plugin.route('/play')
