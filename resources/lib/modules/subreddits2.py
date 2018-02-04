@@ -10,6 +10,7 @@ USER_AGENT = 'sparkle streams 1.0'
 
 class subreddits(object):
     as_regex_str = r'(acestream://[^$\s]+)'
+    newregex = r'(.*acestream://.*")
     comment_url = 'https://www.reddit.com/r/MMAStreams/comments/{}'
 
     def __init__(self, username=None, password=None):
@@ -37,10 +38,13 @@ class subreddits(object):
         links = []
         for c in submission.comments.list():
             if hasattr(c, 'body'):
-                as_links = re.findall(self.as_regex, c.body.encode('utf-8'))
+                linkline = re.findall(self.as_regex, c.body.encode('utf-8'))
+                if linkline:
+                    findstr = linkline.split('acestream://')
                 if as_links:
-                    links.append({'comment_id': c.id,
+                    links.append({'quality': findstr[0]
+                                  'comment_id': c.id,
                                   'score': c.score,
-                                  'ace_links': as_links})
+                                  'ace_links': findstr[1]})
         # Return the list sorted by score
         return sorted(links, key=lambda d: d['score'], reverse=True)
