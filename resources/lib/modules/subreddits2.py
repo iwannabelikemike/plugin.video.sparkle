@@ -38,7 +38,7 @@ class subreddits(object):
         links = []
         for c in submission.comments.list():
             if hasattr(c, 'body'):
-                linkline = re.findall(self.as_regex, c.body.encode('utf-8'))
+                linkline = re.findall(self.newregex, c.body.encode('utf-8'))
                 if linkline:
                     findstr = linkline.split('acestream://')
                 if as_links:
