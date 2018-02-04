@@ -41,7 +41,6 @@ class subreddits(object):
                 linkline = re.findall(self.newregex, c.body.encode('utf-8'))
                 if linkline:
                     findstr = linkline.split('acestream://')
-                if as_links:
                     links.append({'quality': findstr[0]
                                   'comment_id': c.id,
                                   'score': c.score,
