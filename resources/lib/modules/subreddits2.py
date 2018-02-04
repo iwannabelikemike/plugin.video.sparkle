@@ -10,7 +10,7 @@ USER_AGENT = 'sparkle streams 1.0'
 
 class subreddits(object):
     as_regex_str = r'(acestream://[^$\s]+)'
-    newregex = r'(.*acestream://.*")
+    newregex = r'(.*acestream://.*")'
     comment_url = 'https://www.reddit.com/r/MMAStreams/comments/{}'
 
     def __init__(self, username=None, password=None):
