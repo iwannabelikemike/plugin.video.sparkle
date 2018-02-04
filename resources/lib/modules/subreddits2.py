@@ -42,6 +42,11 @@ class subreddits(object):
                 if linkline:
                     for x in range(0, len(linkline)):
                         findstr = linkline[x].split('acestream://')
+                        endlink = findstr[1].find(' ')
+                        if findstr[0] = '':
+                            findstr[0] = 'No Quality Found'
+                        if endlink > 0:
+                            findstr[1] = findstr[1][:endlink]
                         links.append({'quality': re.sub('[^A-Za-z0-9 ]', '', findstr[0]).strip(),
                                       'comment_id': c.id,
                                       'score': c.score,
