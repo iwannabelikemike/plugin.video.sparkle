@@ -43,7 +43,7 @@ class subreddits(object):
                     for x in range(0, len(linkline)):
                         findstr = linkline[x].split('acestream://')
                         endlink = findstr[1].find(' ')
-                        if findstr[0] = '':
+                        if findstr[0] == '':
                             findstr[0] = 'No Quality Found'
                         if endlink > 0:
                             findstr[1] = findstr[1][:endlink]
