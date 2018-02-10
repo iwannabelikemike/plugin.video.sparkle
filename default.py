@@ -42,15 +42,15 @@ def index():
             plugin.url_for(show_subreddit, sr['url']),
             ListItem(sr['name']), True)
     # Add search
-    addDirectoryItem(
-        plugin.handle,
-        plugin.url_for(search),
-        ListItem('TV Network Search'), True)
+    #addDirectoryItem(
+    #    plugin.handle,
+    #    plugin.url_for(search),
+    #    ListItem('TV Network Search'), True)
     # Add channel list
-    addDirectoryItem(
-        plugin.handle,
-        plugin.url_for(channels),
-        ListItem('Channel Streams'), True)
+    #addDirectoryItem(
+    #    plugin.handle,
+    #    plugin.url_for(channels),
+    #    ListItem('Channel Streams'), True)
     endOfDirectory(plugin.handle)
 
 @plugin.route('/subreddit/<subreddit_id>')
@@ -61,7 +61,7 @@ def show_subreddit(subreddit_id):
         # Don't include it if there arent any available
         aces = [i for i in sr.event_links(s['submission_id']) if len(i['ace_links']) > 0]
         if len(aces) > 0:
-            title = "{} ({} Stream)".format(s['title'], len(aces))
+            title = "{} ({} Stream(s))".format(s['title'], len(aces))
             addDirectoryItem(
                 plugin.handle,
                 plugin.url_for(show_event, s['submission_id']),
@@ -73,13 +73,11 @@ def show_event(submission_id):
     sr = subreddits()
     for l in sr.event_links(submission_id):
         if len(l['ace_links']) > 0:
-            for a in l['ace_links']:
-                #url='plugin://program.plexus/?url={a}&mode=2&name=Sparkle'.format(a=a)
-                url = plugin.url_for(play, stream_url=a)
-                addDirectoryItem(
-                    plugin.handle,
-                    url,
-                    ListItem("{} ({} upvotes)".format(a, l['score'])), True)
+            url = plugin.url_for(play, stream_url=l['ace_links'])
+            addDirectoryItem(
+                plugin.handle,
+                url,
+                ListItem("{} ({} votes) {}".format(l['quality'], l['score'],l['ace_links'])), True)
     endOfDirectory(plugin.handle)
 
 @plugin.route('/play')
