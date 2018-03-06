@@ -1,4 +1,4 @@
-This is a fork of the Sparkle Kodi plugin that can be used to find acestream links from the Soccerstreams subreddit. Note that you need Acestream and Plexus installed in Kodi to use it. See releases section for these.
+This is a fork of the Sparkle Kodi plugin that can be used to find acestream links from the Soccerstreams subreddit. Note that you need Acestream and Plexus installed in Kodi to use it. These have been uploaded to Releases for this addon. These dependencies are provided as-is, and have been included from other sources for convenience.
 
 Simply download the ZIP folders to the Kodi device, then install from Addons -> Install from zip file
 
