@@ -1,0 +1,165 @@
+try to load conf file /system/data/data/org.acestream.engine/files/acestream.conf
+pronto e tal cheguei a httplib...
+fim do init...
+putrequest..... GET /__utm.gif?utme=5%28client%2Astartup%2A3.0.6%29&utmac=UA-24039434-6&utmwv=4.3&utmn=100240148&utmcc=__utma%3D397569292.355870639.1439010630.1439010630.1439010630.1%3B&utmt=event
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /__utm.gif?utme=5%28client%2Astartup%2A3.0.6%29&utmac=UA-24039434-6&utmwv=4.3&utmn=100240148&utmcc=__utma%3D397569292.355870639.1439010630.1439010630.1439010630.1%3B&utmt=event HTTP/1.0
+vou chamar o outputurllib2 request building.... 
+passei a merda do output
+pronto caralho, agora e que esta merda vai ligar http://ts.acestream.net/init?a=1439010630www.google-analytics.com 80 None
+ {} None False
+fullurl foi.... <urllib2.Request instance at 0x75156558>
+O pedido feito foi <urllib2.Request instance at 0x75156558> None
+chamou o do_open....
+do_open_host..... ts.acestream.net
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /init?a=1439010630 None {'Host': 'ts.acestream.net', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /init?a=1439010630
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /init?a=1439010630 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... https://r.acestream.net/getsettings?r=126863912&t=1439010631 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x75156ee0>
+O pedido feito foi <urllib2.Request instance at 0x75156ee0> eyJfdiI6ICIzMDAwNjAwIiwgInN5c3RlbV9pbmZvIjogeyJwbGF0Zm9ybSI6ICJhbmRyb2lkIiwgImhkZCI6ICIiLCAicHJvY2Vzc29ycyI6IG51bGwsICJrZXkiOiBudWxsLCAibWVtb3J5IjogMCwgIm1iIjogbnVsbCwgInZpZGVvY2FyZHMiOiBudWxsLCAiYmlvcyI6IG51bGwsICJpZCI6IG51bGx9LCAibm9kZV90eXBlIjogMSwgImV4dHJhX2RhdGEiOiB7ImEiOiAwLCAiYyI6IDAsICJiIjogMCwgImUiOiAwLCAiZCI6IDAsICJoIjogMH0sICJwb3J0IjogODYyMSwgImRldmljZV9pZCI6ICIxNTFiNmM1MzMwY2NiZWM4NTJlMjUzYTM2NjU0YWUyNDE4NTgxMGMwIn0=
+chamou o do_open....
+do_open_host..... r.acestream.net
+ca ver se que merda e esta da http_class httplib.HTTPSConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request POST /getsettings?r=126863912&t=1439010631 eyJfdiI6ICIzMDAwNjAwIiwgInN5c3RlbV9pbmZvIjogeyJwbGF0Zm9ybSI6ICJhbmRyb2lkIiwgImhkZCI6ICIiLCAicHJvY2Vzc29ycyI6IG51bGwsICJrZXkiOiBudWxsLCAibWVtb3J5IjogMCwgIm1iIjogbnVsbCwgInZpZGVvY2FyZHMiOiBudWxsLCAiYmlvcyI6IG51bGwsICJpZCI6IG51bGx9LCAibm9kZV90eXBlIjogMSwgImV4dHJhX2RhdGEiOiB7ImEiOiAwLCAiYyI6IDAsICJiIjogMCwgImUiOiAwLCAiZCI6IDAsICJoIjogMH0sICJwb3J0IjogODYyMSwgImRldmljZV9pZCI6ICIxNTFiNmM1MzMwY2NiZWM4NTJlMjUzYTM2NjU0YWUyNDE4NTgxMGMwIn0= {'Content-Length': '432', 'Accept-Encoding': 'gzip', 'Connection': 'close', 'User-Agent': u'ACEStream/3.0.6', 'Host': u'r.acestream.net', 'Content-Type': 'application/octet-stream'}
+putrequest..... POST /getsettings?r=126863912&t=1439010631
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr POST /getsettings?r=126863912&t=1439010631 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a1.torrentstream.net/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x751590a8>
+O pedido feito foi <urllib2.Request instance at 0x751590a8> None
+chamou o do_open....
+do_open_host..... a1.torrentstream.net
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {'Host': u'a1.torrentstream.net', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a1.torrentstream.info/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x7509cbc0>
+O pedido feito foi <urllib2.Request instance at 0x7509cbc0> None
+chamou o do_open....
+do_open_host..... a1.torrentstream.info
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {'Host': u'a1.torrentstream.info', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a3.torrentstream.net/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x7509ceb8>
+O pedido feito foi <urllib2.Request instance at 0x7509ceb8> None
+chamou o do_open....
+do_open_host..... a3.torrentstream.net
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {'Host': u'a3.torrentstream.net', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a3.torrentstream.org/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x7509cbc0>
+O pedido feito foi <urllib2.Request instance at 0x7509cbc0> None
+chamou o do_open....
+do_open_host..... a3.torrentstream.org
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {'Host': u'a3.torrentstream.org', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a1.torrentstream.org/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x7509cdc8>
+O pedido feito foi <urllib2.Request instance at 0x7509cdc8> None
+chamou o do_open....
+do_open_host..... a1.torrentstream.org
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {'Host': u'a1.torrentstream.org', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a3.torrentstream.info/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x7509cc88>
+O pedido feito foi <urllib2.Request instance at 0x7509cc88> None
+chamou o do_open....
+do_open_host..... a3.torrentstream.info
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {'Host': u'a3.torrentstream.info', 'User-Agent': u'ACEStream/3.0.6', 'Connection': 'close', 'Accept-Encoding': 'gzip'}
+putrequest..... GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699
+afinal nao havia resposta...proceeding
+passei esta merda...
+hdr GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 HTTP/1.1
+vou chamar o output
+passei a merda do output
+pronto e agora foste para onde
+urllib2 request building.... http://a2.torrentstream.org/preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe7eb191a29d8bf55d02de63a4b82a8702c699 None {} None False
+fullurl foi.... <urllib2.Request instance at 0x7509cad0>
+O pedido feito foi <urllib2.Request instance at 0x7509cad0> None
+chamou o do_open....
+do_open_host..... a2.torrentstream.org
+ca ver se que merda e esta da http_class ACEStream.Core.Utilities.timeouturlopen.TimeoutHTTPConnection
+pronto e tal cheguei a httplib...
+fim do init...
+estou aqui...vamos ca ver se tem tunnel_host None
+eh aqui que esta merda faz o pedido?
+chamar o send request GET /preload?d=151b6c5330ccbec852e253a36654ae24185810c0&i=1&t=1439010631&r=1923308655&v=3.0.6&s=02fe

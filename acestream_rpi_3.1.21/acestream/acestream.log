@@ -1,0 +1,96 @@
+__bionic_open_tzdata: couldn't find any tzdata when looking for :Europe/London!
+__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+WARNING: linker: /system/data/data/org.acestream.engine/files/python/lib/libxslt.so.1: unused DT entry: type 0xf arg 0x250f
+WARNING: linker: /system/data/data/org.acestream.engine/files/python/lib/libexslt.so.0: unused DT entry: type 0xf arg 0xbf1
+WARNING: linker: /system/data/data/org.acestream.engine/files/python/lib/python2.7/lib-dynload/_sqlite3.so: unused DT entry: type 0xf arg 0x1577
+Load library: /system/data/data/org.acestream.engine/files/eggs/beautifulsoup4-4.5.3-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/requests-2.12.5-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/opengraph-0.5-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/repoze.lru-0.6-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/iso8601-0.1.10-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/webencodings-0.5-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/six-1.10.0-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/singledispatch-3.4.0.3-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/Routes-2.3.1-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/futures-3.0.5-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/enum34-1.1.6-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/xmltodict-0.9.2-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/websocket_client-0.40.0-py2.7.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/pkg_resources.egg
+Load library: /system/data/data/org.acestream.engine/files/eggs/html5lib-0.9999999999_dev-py2.7.egg
+2018-01-22 00:15:05,435|MainThread|acestream|language=ru_RU
+2018-01-22 00:15:05,436|MainThread|acestream|exec_dir='/system/data/data/org.acestream.engine/files'
+2018-01-22 00:15:05,437|MainThread|acestream|logs_dir='/system/data/data/org.acestream.engine/files'
+2018-01-22 00:15:05,437|MainThread|acestream|install_dir='/system/data/data/org.acestream.engine/files'
+2018-01-22 00:15:05,454|MainThread|acestream|init segmenter done: log_path=/system/data/data/org.acestream.engine/files/segmenter.log
+2018-01-22 00:15:05,455|MainThread|acestream|platform=android
+2018-01-22 00:15:05,455|MainThread|acestream|app=acestream
+2018-01-22 00:15:05,456|MainThread|acestream|version=3.1.21 code=3012100 revision=a20c date=2017-11-13
+2018-01-22 00:15:05,456|MainThread|acestream|use_local_db=True
+2018-01-22 00:15:05,457|MainThread|acestream|use_m2crypto=False
+2018-01-22 00:15:05,457|MainThread|acestream|enable debug: 0
+2018-01-22 00:15:05,461|MainThread|acestream|get_default_api_version: 2
+2018-01-22 00:15:05,461|MainThread|acestream.coreapp|use fixed i2i_port: 62062
+2018-01-22 00:15:05,462|MainThread|acestream.coreapp|state_dir='/system/data/data/org.acestream.engine/files/.ACEStream'
+sh: /bin/netstat: not found
+sh: /sbin/ifconfig: not found
+2018-01-22 00:15:05,515|MainThread|acestream.SocketHandler.InterruptSocket|bound on 127.0.0.1:50510
+2018-01-22 00:15:05,516|MainThread|acestream.SocketHandler.SocketHandler|bind: socket bound: host=0.0.0.0 port=8621
+2018-01-22 00:15:05,517|MainThread|acestream.LM|listen on 8621
+2018-01-22 00:15:05,544|MainThread|dht|init_bootstrap_nodes: failed to resolve host router.bittorrent.com
+2018-01-22 00:15:05,547|MainThread|dht|init_bootstrap_nodes: failed to resolve host dht.transmissionbt.com
+2018-01-22 00:15:05,556|AceStreamCoreThread|acestream.LM|start_multicast: error
+Traceback (most recent call last):
+  File "ACEStream/Core/APIImplementation/LaunchManyCore.py", line 1041, in start_multicast
+  File "ACEStream/Core/BitTornado/RawServer.py", line 389, in create_multicast_sockets
+  File "ACEStream/Core/BitTornado/SocketHandler.py", line 826, in create_multicast_sockets
+  File "ACEStream/Core/BitTornado/SocketHandler.py", line 930, in get_local_ips
+gaierror: [Errno 7] No address associated with hostname
+2018-01-22 00:15:05,566|MainThread|acestream.VideoServer|start: addr= port=6878 allow_remote=0 allow_intranet=1
+2018-01-22 00:15:10,151|MainThread|acestream.SocketHandler.InterruptSocket|bound on 127.0.0.1:51810
+2018-01-22 00:15:10,277|MainThread|acestream.SocketHandler.SocketHandler|bind: socket bound: host=0.0.0.0 port=62062
+2018-01-22 00:15:10,309|Instance2InstanceThread-24|acestream.APIServer|run: ready to receive remote commands on 62062
+2018-01-22 00:15:11,235|Instance2InstanceThread-24|acestream.coreapp|external_connection_made: ip=127.0.0.1 port=41166 myip=127.0.0.1 myport=62062 connections=1
+2018-01-22 00:15:11,238|BGTaskQueueThread-1|acestream.coreapp|got command: HELLOBG
+2018-01-22 00:15:11,239|BGTaskQueueThread-1|acestream.BGInstanceConnection|send HELLOTS version=3.1.21 version_code=3012100 key=4324853ed9 http_port=6878 bmode=0
+
+2018-01-22 00:15:12,244|BGTaskQueueThread-1|acestream.coreapp|got command: READY key=n51LvQoTlJzNGaFxseRK-99f5c415825f81a0388f599cf6072019f1b2127d
+2018-01-22 00:15:12,246|BGTaskQueueThread-1|acestream.BGInstanceConnection|send AUTH 17
+2018-01-22 00:15:12,247|BGTaskQueueThread-1|acestream.coreapp|got command: LOADASYNC 1308157348 PID b3a8efd5810748aec19f68e9155cd5bdd23d9c45
+2018-01-22 00:15:12,264|BGTaskQueueThread-1|acestream.BGInstanceConnection|send_load_response: request_id=1308157348 response={"status": 1, "files": [["Upvote%20if%20you%20like%20it", 0]], "infohash": "773442e0e7c49fbe61fd47175019c1446bbc35c6", "checksum": "54c48b91f108bdfe19a78174fb8116b43e351682"}
+2018-01-22 00:15:12,446|BGTaskQueueThread-1|acestream.coreapp|got command: START PID b3a8efd5810748aec19f68e9155cd5bdd23d9c45 0
+2018-01-22 00:15:12,462|BGTaskQueueThread-1|acestream.BGInstanceConnection|send STATE 1
+2018-01-22 00:15:12,463|BGTaskQueueThread-1|acestream.coreapp|start_download_wrapper: dlfile=Upvote if you like it fileindex=0
+2018-01-22 00:15:12,464|BGTaskQueueThread-1|acestream.coreapp|start_download_wrapper: starting new download
+2018-01-22 00:15:12,625|BGTaskQueueThread-1|acestream.coreapp|start_download: starting new download: infohash=773442e0e7c49fbe61fd47175019c1446bbc35c6 initialdlstatus=None output_format=hls pausable=None transcode=(audio=True mp3=False ac3=False)
+2018-01-22 00:15:12,688|Timer-Thread-31|acestream.BGInstanceConnection|start_playback: telling plugin to start playback: use_new_api=0 is_ad=0 is_interruptable_ad=0 is_live=1 url=http://127.0.0.1:6878/ace/m/773442e0e7c49fbe61fd47175019c1446bbc35c6/9df165383be30e206432e2cfe6aa2bab.m3u8 click_url=None skip_offset=None volume=None no_ad_text=None ad_info_text=None media_params=None length=None bitrate=None file_index=0 allow_multiple_threads=0
+2018-01-22 00:15:12,690|Timer-Thread-31|acestream.BGInstanceConnection|start_playback: send cmd START http://127.0.0.1:6878/ace/m/773442e0e7c49fbe61fd47175019c1446bbc35c6/9df165383be30e206432e2cfe6aa2bab.m3u8 stream=1
+2018-01-22 00:15:12,691|Timer-Thread-31|acestream.BGInstanceConnection|send STATE 2
+__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+2018-01-22 00:15:16,914|ProxyServerTaskQueueThread-3|acestream.ttqueue.ProxyServerTaskQueue|run: error
+Traceback (most recent call last):
+  File "ACEStream/Utilities/TimedTaskQueue.py", line 159, in run
+  File "core.c", line 17810, in 
+TypeError: 'NoneType' object is not callable
+2018-01-22 00:15:18,159|SessionPoolThread-14|acestream.Session|save_content_metadata_to_storage: error
+Traceback (most recent call last):
+  File "ACEStream/Core/Session.py", line 1274, in save_content_metadata_to_storage
+  File "/system/data/data/org.acestream.engine/files/python/lib/python27.zip/json/__init__.py", line 181, in dump
+    for chunk in iterable:
+  File "/system/data/data/org.acestream.engine/files/python/lib/python27.zip/json/encoder.py", line 428, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/system/data/data/org.acestream.engine/files/python/lib/python27.zip/json/encoder.py", line 402, in _iterencode_dict
+    for chunk in chunks:
+  File "/system/data/data/org.acestream.engine/files/python/lib/python27.zip/json/encoder.py", line 402, in _iterencode_dict
+    for chunk in chunks:
+  File "/system/data/data/org.acestream.engine/files/python/lib/python27.zip/json/encoder.py", line 402, in _iterencode_dict
+    for chunk in chunks:
+  File "/system/data/data/org.acestream.engine/files/python/lib/python27.zip/json/encoder.py", line 384, in _iterencode_dict
+    yield _encoder(value)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xc8 in position 0: invalid continuation byte
+2018-01-22 00:15:25,688|BGTaskQueueThread-1|acestream.coreapp|got command: DUR http://127.0.0.1:6878/ace/m/773442e0e7c49fbe61fd47175019c1446bbc35c6/9df165383be30e206432e2cfe6aa2bab.m3u8 0
+2018-01-22 00:15:26,007|BGTaskQueueThread-1|acestream.coreapp|got command: PLAYBACK http://127.0.0.1:6878/ace/m/773442e0e7c49fbe61fd47175019c1446bbc35c6/9df165383be30e206432e2cfe6aa2bab.m3u8 0
+2018-01-22 00:15:34,159|BGTaskQueueThread-1|acestream.coreapp|got command: PLAYBACK http://127.0.0.1:6878/ace/m/773442e0e7c49fbe61fd47175019c1446bbc35c6/9df165383be30e206432e2cfe6aa2bab.m3u8 50
+Killed

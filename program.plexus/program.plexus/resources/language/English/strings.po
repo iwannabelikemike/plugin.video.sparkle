@@ -1,0 +1,675 @@
+# Kodi Media Center language file
+# Addon Name: Plexus
+# Addon id: program.plexus
+# Addon Provider: enen92
+msgid ""
+msgstr ""
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgctxt "#30000"
+msgid "Plexus"
+msgstr ""
+
+msgctxt "#30001"
+msgid "My Streams"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Played history"
+msgstr ""
+
+msgctxt "#30003"
+msgid "AceStream: "
+msgstr ""
+
+msgctxt "#30004"
+msgid "SopCast: "
+msgstr ""
+
+msgctxt "#30005"
+msgid "Play Acestream hash / Torrent URI"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Load local .torrent file"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Play SopCast ID"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Play SopCast URI"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Add stream"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Stream url"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Url is not valid"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Do you want to set an icon for the stream?"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Choose the icon"
+msgstr ""
+
+msgctxt "#30014"
+msgid "Stream name"
+msgstr ""
+
+msgctxt "#30015"
+msgid "Successfully added!"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Successfully removed!"
+msgstr ""
+
+msgctxt "#30017"
+msgid "Setting changed successfully!"
+msgstr ""
+
+msgctxt "#30018"
+msgid "ID"
+msgstr ""
+
+msgctxt "#30019"
+msgid "URI"
+msgstr ""
+
+msgctxt "#30020"
+msgid "User ID"
+msgstr ""
+
+msgctxt "#30021"
+msgid "User URI"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Acestream hash"
+msgstr ""
+
+msgctxt "#30023"
+msgid "Extracting module contents. Please wait."
+msgstr ""
+
+msgctxt "#30024"
+msgid "Removing files."
+msgstr ""
+
+msgctxt "#30025"
+msgid "Remove from my streams"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Add to my streams"
+msgstr ""
+
+msgctxt "#30027"
+msgid "(Windows) SopCast configuration incomplete!"
+msgstr ""
+
+msgctxt "#30028"
+msgid "Enable 'Configuration on next run' in the addon settings"
+msgstr ""
+
+msgctxt "#30029"
+msgid "and re-enter the addon (as administrator)"
+msgstr ""
+
+msgctxt "#30030"
+msgid "SopCast - Checking service. Please wait..."
+msgstr ""
+
+msgctxt "#30031"
+msgid "Service created. Attempting to play..."
+msgstr ""
+
+msgctxt "#30032"
+msgid "Channel initialization failed"
+msgstr ""
+
+msgctxt "#30033"
+msgid "Another instance of SopCast is still running on the background"
+msgstr ""
+
+msgctxt "#30034"
+msgid "Do you want to play it?"
+msgstr ""
+
+msgctxt "#30035"
+msgid "Loading stream. Please wait %s seconds."
+msgstr ""
+
+msgctxt "#30036"
+msgid "Waiting till timeout..."
+msgstr ""
+
+msgctxt "#30037"
+msgid "Choose the local torrent file."
+msgstr ""
+
+msgctxt "#30038"
+msgid "Starting AceStream (ValdikSS proxy mode)"
+msgstr ""
+
+msgctxt "#30039"
+msgid "If the playback fails try to increase the player"
+msgstr ""
+
+msgctxt "#30040"
+msgid "timeout!"
+msgstr ""
+
+msgctxt "#30041"
+msgid "Acestream module not installed."
+msgstr ""
+
+msgctxt "#30042"
+msgid "Torrent not available or invalid."
+msgstr ""
+
+msgctxt "#30043"
+msgid "Starting..."
+msgstr ""
+
+msgctxt "#30044"
+msgid "Awaiting response"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Connecting"
+msgstr ""
+
+msgctxt "#30046"
+msgid "Starting AceStream Engine."
+msgstr ""
+
+msgctxt "#30047"
+msgid "Inital wait:"
+msgstr ""
+
+msgctxt "#30048"
+msgid "seconds"
+msgstr ""
+
+msgctxt "#30049"
+msgid "Playing"
+msgstr ""
+
+msgctxt "#30050"
+msgid "Link received"
+msgstr ""
+
+msgctxt "#30051"
+msgid "Saving file"
+msgstr ""
+
+msgctxt "#30052"
+msgid "Downloading"
+msgstr ""
+
+msgctxt "#30053"
+msgid "Loading..."
+msgstr ""
+
+msgctxt "#30054"
+msgid "Loading acestream"
+msgstr ""
+
+msgctxt "#30055"
+msgid "AceStream engine waiting"
+msgstr ""
+
+msgctxt "#30056"
+msgid "Playing torrent."
+msgstr ""
+
+msgctxt "#30057"
+msgid "No response"
+msgstr ""
+
+msgctxt "#30058"
+msgid "Verifying data"
+msgstr ""
+
+msgctxt "#30059"
+msgid "Pre-buffering"
+msgstr ""
+
+msgctxt "#30060"
+msgid "Downloading"
+msgstr ""
+
+msgctxt "#30061"
+msgid "Buffering"
+msgstr ""
+
+msgctxt "#30062"
+msgid "Acestream Engine"
+msgstr ""
+
+msgctxt "#30063"
+msgid "Stats"
+msgstr ""
+
+msgctxt "#30064"
+msgid "Action:"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Download:"
+msgstr ""
+
+msgctxt "#30066"
+msgid "Upload:"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Seeds:"
+msgstr ""
+
+msgctxt "#30068"
+msgid "Downloaded:"
+msgstr ""
+
+msgctxt "#30069"
+msgid "Uploaded:"
+msgstr ""
+
+msgctxt "#30070"
+msgid "Left:"
+msgstr ""
+
+msgctxt "#30071"
+msgid "seconds"
+msgstr ""
+
+msgctxt "#30072"
+msgid "Unable to detect your operating system"
+msgstr ""
+
+msgctxt "#30073"
+msgid "Select it from the list"
+msgstr ""
+
+msgctxt "#30074"
+msgid "Are you using OpenELEC x86_x64?"
+msgstr ""
+
+msgctxt "#30075"
+msgid "Are you usng OpenELEC i386?"
+msgstr ""
+
+msgctxt "#30076"
+msgid "Downloading SopCast modules."
+msgstr ""
+
+msgctxt "#30077"
+msgid "Kodi has to be running as administrator."
+msgstr ""
+
+msgctxt "#30078"
+msgid "to configure SopCast in Windows."
+msgstr ""
+
+msgctxt "#30079"
+msgid "Checking if SopCast is installed..."
+msgstr ""
+
+msgctxt "#30080"
+msgid "Finished."
+msgstr ""
+
+msgctxt "#30081"
+msgid "SopCast.exe is not installed!"
+msgstr ""
+
+msgctxt "#30082"
+msgid "Download it from SopCast.org and install it!"
+msgstr ""
+
+msgctxt "#30083"
+msgid "Getting Windows user ID's..."
+msgstr ""
+
+msgctxt "#30084"
+msgid "Unable to get users list"
+msgstr ""
+
+msgctxt "#30085"
+msgid "Getting Windows user ID's..."
+msgstr ""
+
+msgctxt "#30086"
+msgid "Starting SRVany download..."
+msgstr ""
+
+msgctxt "#30087"
+msgid "Downloading SRVany..."
+msgstr ""
+
+msgctxt "#30088"
+msgid "Creating 'sopcastp2p' service..."
+msgstr ""
+
+msgctxt "#30089"
+msgid "Unable to create service!"
+msgstr ""
+
+msgctxt "#30090"
+msgid "Modifying regedit..."
+msgstr ""
+
+msgctxt "#30091"
+msgid "Error: Unable to modify regedit."
+msgstr ""
+
+msgctxt "#30092"
+msgid "Trying to get service permissions..."
+msgstr ""
+
+msgctxt "#30093"
+msgid "Error: Unable to change permissions."
+msgstr ""
+
+msgctxt "#30094"
+msgid "Trying to set service permissions..."
+msgstr ""
+
+msgctxt "#30095"
+msgid "Error: Unable to change service permissons."
+msgstr ""
+
+msgctxt "#30096"
+msgid "Starting regini download..."
+msgstr ""
+
+msgctxt "#30097"
+msgid "Downloading regini..."
+msgstr ""
+
+msgctxt "#30098"
+msgid "Running regini..."
+msgstr ""
+
+msgctxt "#30099"
+msgid "Sopcast: All done sucessfully!"
+msgstr ""
+
+msgctxt "#30100"
+msgid "Not available for the architecture of your Mac."
+msgstr ""
+
+msgctxt "#30101"
+msgid "By default Sopcast will use the Kodi player."
+msgstr ""
+
+msgctxt "#30103"
+msgid "Do you want to use an external application/player?"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Click ok to download SopCast.apk"
+msgstr ""
+
+msgctxt "#30105"
+msgid "Select the folder to save the apks"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Downloading SopCast.apk"
+msgstr ""
+
+msgctxt "#30107"
+msgid "SopCast.apk downloaded to folder:"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Please install it!"
+msgstr ""
+
+msgctxt "#30109"
+msgid "AppID not detected"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Downloading AceStream modules."
+msgstr ""
+
+msgctxt "#30111"
+msgid "Downloading AcestreamEngine bundle for Android"
+msgstr ""
+
+msgctxt "#30112"
+msgid "By default Plexus will use its included Acestream Engine"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Do you want to download and use the app instead?"
+msgstr ""
+
+msgctxt "#30114"
+msgid "It is necessary to have acestreamengine.apk"
+msgstr ""
+
+msgctxt "#30115"
+msgid "installed to run Acestreams."
+msgstr ""
+
+msgctxt "#30116"
+msgid "It will be downloaded now!"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Downloading AcestreamEngine.apk"
+msgstr ""
+
+msgctxt "#30118"
+msgid "Acestream.apk downloaded to folder:"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Don't forget AcestreamEngine app"
+msgstr ""
+
+msgctxt "#30120"
+msgid "should be running before starting"
+msgstr ""
+
+msgctxt "#30121"
+msgid "any Acestream!"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Do you want to download Ace Player?"
+msgstr ""
+
+msgctxt "#30123"
+msgid "This will enable you the ability to use the external player option."
+msgstr ""
+
+msgctxt "#30124"
+msgid "Downloading Ace Player"
+msgstr ""
+
+msgctxt "#30125"
+msgid "Aceplayer.apk downladed to folder:"
+msgstr ""
+
+msgctxt "#30126"
+msgid "Do you want to use the external player as default?"
+msgstr ""
+
+msgctxt "#30127"
+msgid "AceStream: All done!"
+msgstr ""
+
+msgctxt "#30128"
+msgid "Plexus is only available for certain linux arm platforms."
+msgstr ""
+
+msgctxt "#30129"
+msgid "Please select yours from the following list."
+msgstr ""
+
+msgctxt "#30130"
+msgid "Select your operating system"
+msgstr ""
+
+msgctxt "#30131"
+msgid "General"
+msgstr ""
+
+msgctxt "#30132"
+msgid "Repeat configuration on the next run"
+msgstr ""
+
+msgctxt "#30133"
+msgid "Force use of dvdplayer"
+msgstr ""
+
+msgctxt "#30134"
+msgid "Enable debug mode"
+msgstr ""
+
+msgctxt "#30135"
+msgid "Enable addon history"
+msgstr ""
+
+msgctxt "#30136"
+msgid "Number of items to save"
+msgstr ""
+
+msgctxt "#30137"
+msgid "Clear addon history"
+msgstr ""
+
+msgctxt "#30138"
+msgid "SopCast configuration"
+msgstr ""
+
+msgctxt "#30139"
+msgid "Player Type"
+msgstr ""
+
+msgctxt "#30140"
+msgid "Find ip address automatically"
+msgstr ""
+
+msgctxt "#30141"
+msgid "Ip address"
+msgstr ""
+
+msgctxt "#30142"
+msgid "Local port"
+msgstr ""
+
+msgctxt "#30143"
+msgid "Video port"
+msgstr ""
+
+msgctxt "#30144"
+msgid "Buffer size"
+msgstr ""
+
+msgctxt "#30145"
+msgid "Player start timeout"
+msgstr ""
+
+msgctxt "#30146"
+msgid "Player start delay"
+msgstr ""
+
+msgctxt "#30147"
+msgid "Service creation timeout"
+msgstr ""
+
+msgctxt "#30148"
+msgid "Stream creation timeout"
+msgstr ""
+
+msgctxt "#30149"
+msgid "Auto-detect android app id"
+msgstr ""
+
+msgctxt "#30150"
+msgid "Custom app id"
+msgstr ""
+
+msgctxt "#30151"
+msgid "AceStream configurations"
+msgstr ""
+
+msgctxt "#30152"
+msgid "AceStreams"
+msgstr ""
+
+msgctxt "#30153"
+msgid "AceStream player type"
+msgstr ""
+
+msgctxt "#30154"
+msgid "AceStream command"
+msgstr ""
+
+msgctxt "#30155"
+msgid "AceStream alternative cmd"
+msgstr ""
+
+msgctxt "#30156"
+msgid "AceStream engine ip address"
+msgstr ""
+
+msgctxt "#30157"
+msgid "AceStream engine port"
+msgstr ""
+
+msgctxt "#30158"
+msgid "AceStream engine player port"
+msgstr ""
+
+msgctxt "#30159"
+msgid "Show AceStream engine status on video OSD"
+msgstr ""
+
+msgctxt "#30160"
+msgid "Auto pause mode"
+msgstr ""
+
+msgctxt "#30161"
+msgid "Keep downloaded files in disk"
+msgstr ""
+
+msgctxt "#30162"
+msgid "Download path"
+msgstr ""
+
+msgctxt "#30163"
+msgid "Shutdown AceStream engine on playback stop"
+msgstr ""
+
+msgctxt "#30164"
+msgid "AceStream shutdown type"
+msgstr ""
+
+msgctxt "#30165"
+msgid "Custom Acestream engine shutdown command"
+msgstr ""
+
