@@ -11,6 +11,7 @@ Addons can be downloaded from the releases section of this repo. Simply download
 
 For Raspberry Pi, an updated version of Acestream can be installed. Connect to the Pi over SSH then:
 
+cd ~/.kodi/userdata/addon_data/program.plexus
 sudo rm -r acestream
 wget https://github.com/jackyaz/plugin.video.sparkle/releases/download/1.1.0/acestream3121.tar.gz
 tar xfv acestream3121.tar.gz
