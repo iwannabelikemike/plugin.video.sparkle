@@ -2,5 +2,7 @@
 Sparkle sports addon by [COLOR yellow]moose[/COLOR]
 ====================================================================
 
+v0.0.77 [2018-04-16]
+-added WWE Streams
 v0.0.1 [2017-12-26]
 -initial release
