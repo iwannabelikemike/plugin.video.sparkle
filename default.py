@@ -73,13 +73,15 @@ def show_event(submission_id):
     sr = subreddits()
     for l in sr.event_links(submission_id):
         if len(l['ace_links']) > 0:
-            for a in l['ace_links']:
-                #url='plugin://program.plexus/?url={a}&mode=2&name=Sparkle'.format(a=a)
-                url = plugin.url_for(play, stream_url=a)
-                addDirectoryItem(
-                    plugin.handle,
-                    url,
-                    ListItem("{} ({} upvotes)".format(a, l['score'])), True)
+            #for a in l['ace_links']:
+            #url='plugin://program.plexus/?url={a}&mode=2&name=Sparkle'.format(a=a)
+            log('acelink is {}'.format(l['ace_links']))
+            url = plugin.url_for(play, stream_url=l['ace_links'])
+            addDirectoryItem(
+                plugin.handle,
+                url,
+                #ListItem("{} - Quality: {} ({} upvotes)".format(a, l['quality'], l['score'])), True)
+                ListItem("{} ({} upvotes)".format(l['quality'], l['score'])), True)
     endOfDirectory(plugin.handle)
 
 @plugin.route('/play')
