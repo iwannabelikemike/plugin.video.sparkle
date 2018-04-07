@@ -1,3 +1,0 @@
-===== Stable Versions ========
-[B]v1.0.0 (09/19/2015)[/B]
-- Initial release on Bitbucket
