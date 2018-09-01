@@ -83,8 +83,9 @@ class SubRedditEvents(object):
                 links.extend(self.get_as_links(c.body.encode('utf-8')))
             # Add entry to our scores table taking the largest score for a given
             # acestream link
+            score = c.score if hasattr(c, 'score') else 0
             for entry in links:
-                scores[entry[0]] = max(scores.get(entry[0], 0), c.score)
+                scores[entry[0]] = max(scores.get(entry[0], 0), score)
         if len(links) > 0:
             return [(s, q, a) for ((a, q), s) in
                 zip(links, map(lambda x: scores[x[0]], links))]
