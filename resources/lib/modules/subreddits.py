@@ -32,7 +32,16 @@ class SubRedditEvents(object):
         For each acestream link, return a tuple of acestream link,
         and link quality
         """
-        return re.findall('(acestream://[a-z0-9]+)\s*(.*)', body)
+        links = []
+        for entry in body.split('\n'):
+            res = re.findall('(.*)(acestream://[a-z0-9]+)\s*(.*)', entry)
+            if res:
+                pre, acelink, post = res[0]
+                if len(pre.strip()) > len(post.strip()):
+                    links.append((acelink.strip(), pre.strip()))
+                else:
+                    links.append((acelink.strip(), post.strip()))
+        return links
 
     @staticmethod
     def priority(entry):

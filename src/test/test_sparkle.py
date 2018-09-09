@@ -52,6 +52,16 @@ def test_subreddits_event_links_soccerstreams_2():
         (1, '[520P] [MATCH! TV] [RU]', 'acestream://e395ed3864f9e1678f9b1ef2c6d1b0ae64648177'),
     ]
 
+def test_subreddit_event_links_mmastreams_1():
+    reddit = Mock(spec=Reddit)
+    reddit.submission.return_value.comments.list.return_value = [comment('9e5o26_e5mooui', 1)]
+    sr = SubRedditEvents(client=reddit)
+    results = sr.get_event_links(submission_id="9e5o26_e5mooui")
+    assert results == [
+        (1, '[1080p]', 'acestream://ecd0d63b693b4e6bd8e78619555ef93b0833c548'),
+        (1, '[720p]', 'acestream://435f33489993cf692b701061b1c8577ef2142c14'),
+    ]
+
 def test_subreddits_event_links_motorsportsstreams_1():
     reddit = Mock(spec=Reddit)
     reddit.submission.return_value.comments.list.return_value = [comment('motorsportsstreams_comment_1', 1)]
