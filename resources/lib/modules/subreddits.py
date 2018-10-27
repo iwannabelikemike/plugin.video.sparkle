@@ -14,9 +14,16 @@ CLIENT_ID = 'J_0zNv7dXM1n3Q'
 CLIENT_SECRET = 'sfiPkzKDd8LZl3Ie1WLAvpCICH4'
 USER_AGENT = 'sparkle streams 1.0'
 
-class SubRedditEvents(object):
-    as_regex_str = r'(acestream://[^$\s]+)'
+as_regex_str = [r'(.*)(acestream://[a-f0-9]{40})(.*)', r'(.*)([a-f0-9]{40})(.*)']
 
+# order of link qualities
+LQ_1080p60 = 0
+LQ_720p60  = 1
+LQ_1080p30 = 2
+LQ_720p30  = 3
+LQ_OTHER   = 4
+
+class SubRedditEvents(object):
     def __init__(self, username=None, password=None, client=None):
         self.client = client or Reddit(client_id=CLIENT_ID,
                               client_secret=CLIENT_SECRET,
@@ -24,7 +31,7 @@ class SubRedditEvents(object):
                               username=username,
                               password=password,
                             )
-        self.as_regex = re.compile(self.as_regex_str, re.IGNORECASE)
+        self.as_regex = re.compile(as_regex_str[0], re.IGNORECASE)
 
     @staticmethod
     def get_as_links(body):
@@ -34,13 +41,32 @@ class SubRedditEvents(object):
         """
         links = []
         for entry in body.split('\n'):
-            res = re.findall('(.*)(acestream://[a-z0-9]+)\s*(.*)', entry)
-            if res:
-                pre, acelink, post = res[0]
-                if len(pre.strip()) > len(post.strip()):
-                    links.append((acelink.strip(), pre.strip()))
-                else:
-                    links.append((acelink.strip(), post.strip()))
+            linkfound = False
+            for regx_str in as_regex_str:
+                res = re.findall(regx_str, entry)
+                if res and not linkfound:
+                    linkfound = True
+                    pre, acelink, post = res[0]
+                    if 'acestream://' not in acelink.strip():
+                        acelink = 'acestream://' + acelink.strip()
+
+                    title = ''
+                    if len(pre.strip()) > len(post.strip()):
+                        title = pre.strip().replace('\\','')
+                    else:
+                        title = post.strip().replace('\\','')
+
+                    quality = LQ_OTHER
+                    if '1080' in title or '[HD]' in title:
+                        quality = LQ_1080p30
+                        if '60' in title:
+                            quality = LQ_1080p60
+                    elif '720' in title or '[SD]' in title:
+                        quality = LQ_720p30
+                        if '60' in title:
+                            quality = LQ_720p60
+
+                    links.append((acelink, title, quality))
         return links
 
     @staticmethod
@@ -85,16 +111,31 @@ class SubRedditEvents(object):
     def get_event_links(self, submission_id):
         submission = self.client.submission(id=submission_id)
         links = []
+        links_title = {}
+        links_quality = {}
         scores = {}
         # Add the extracted links and details tuple
         for c in submission.comments.list():
+            templinks = []
             if hasattr(c, 'body'):
-                links.extend(self.get_as_links(c.body.encode('utf-8')))
+                templinks = self.get_as_links(c.body.encode('utf-8'))
             # Add entry to our scores table taking the largest score for a given
             # acestream link
             score = c.score if hasattr(c, 'score') else 0
-            for entry in links:
-                scores[entry[0]] = max(scores.get(entry[0], 0), score)
+            for link,title,quality in templinks:
+                scores[link] = max(scores.get(link, 0), score)
+                if link not in links_title.keys():
+                    links_title[link] = title
+                elif len(links_title[link]) < len(title):
+                    # Duplicate link found, update title if longer
+                    links_title[link] = title
+                # Update link quality if specified in title
+                links_quality[link] = min(links_quality.get(link, 4), quality)
+        # Sort links by quality
+        for i in range(LQ_1080p60, LQ_OTHER + 1):
+            for link,quality in links_quality.items():
+                if i == quality:
+                    links.append((link, links_title[link]))
         if len(links) > 0:
             return [(s, q, a) for ((a, q), s) in
                 zip(links, map(lambda x: scores[x[0]], links))]
