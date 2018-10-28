@@ -1,5 +1,6 @@
-import os, sys, re, json
+import os, sys, re, json, requests, xbmc
 from praw2 import Reddit
+from traceback import format_exc
 reload(sys)
 
 try:
@@ -22,6 +23,19 @@ LQ_720p60  = 1
 LQ_1080p30 = 2
 LQ_720p30  = 3
 LQ_OTHER   = 4
+
+def get_quality_from_title(title):
+    quality = LQ_OTHER
+    if '1080' in title or '[HD]' in title:
+        quality = LQ_1080p30
+        if '60' in title:
+            quality = LQ_1080p60
+    elif '720' in title or '[SD]' in title:
+        quality = LQ_720p30
+        if '60' in title:
+            quality = LQ_720p60
+    return quality
+
 
 class SubRedditEvents(object):
     def __init__(self, username=None, password=None, client=None):
@@ -56,16 +70,7 @@ class SubRedditEvents(object):
                     else:
                         title = post.strip().replace('\\','')
 
-                    quality = LQ_OTHER
-                    if '1080' in title or '[HD]' in title:
-                        quality = LQ_1080p30
-                        if '60' in title:
-                            quality = LQ_1080p60
-                    elif '720' in title or '[SD]' in title:
-                        quality = LQ_720p30
-                        if '60' in title:
-                            quality = LQ_720p60
-
+                    quality = get_quality_from_title(title)
                     links.append((acelink, title, quality))
         return links
 
@@ -99,6 +104,10 @@ class SubRedditEvents(object):
 
     def get_events(self, subreddit, filtering=False):
         subs = []
+        # morningstreams
+        if 'morningstreams' in subreddit:
+            subs.append({'submission_id': 'morningstreams2', 'title': 'F1', 'score': 69})
+            return sorted(subs, key=lambda d: d['score'], reverse=True)
         path = '/r/{}'.format(subreddit)
         for submission in self.client.get(path):
             sub_id = submission.id
@@ -109,28 +118,44 @@ class SubRedditEvents(object):
         return sorted(subs, key=lambda d: d['score'], reverse=True)
 
     def get_event_links(self, submission_id):
-        submission = self.client.submission(id=submission_id)
         links = []
         links_title = {}
         links_quality = {}
         scores = {}
-        # Add the extracted links and details tuple
-        for c in submission.comments.list():
-            templinks = []
-            if hasattr(c, 'body'):
-                templinks = self.get_as_links(c.body.encode('utf-8'))
-            # Add entry to our scores table taking the largest score for a given
-            # acestream link
-            score = c.score if hasattr(c, 'score') else 0
-            for link,title,quality in templinks:
-                scores[link] = max(scores.get(link, 0), score)
-                if link not in links_title.keys():
-                    links_title[link] = title
-                elif len(links_title[link]) < len(title):
-                    # Duplicate link found, update title if longer
-                    links_title[link] = title
-                # Update link quality if specified in title
-                links_quality[link] = min(links_quality.get(link, 4), quality)
+        if 'morningstreams' in submission_id:
+            try:
+                r = requests.get('https://morningstreams.com/api/acestreams.json')
+                if r.status_code == 200:
+                    j = r.json()
+                    for i in j:
+                        title = i["details"]
+                        link = 'acestream://' + i["acestreamid"]
+                        links_title[link] = title
+                        links_quality[link] = get_quality_from_title(title)
+                        scores[link] = 0
+                else:
+                    return links
+            except Exception:
+                return links
+        else:
+            submission = self.client.submission(id=submission_id)
+            # Add the extracted links and details tuple
+            for c in submission.comments.list():
+                templinks = []
+                if hasattr(c, 'body'):
+                    templinks = self.get_as_links(c.body.encode('utf-8'))
+                # Add entry to our scores table taking the largest score for a given
+                # acestream link
+                score = c.score if hasattr(c, 'score') else 0
+                for link,title,quality in templinks:
+                    scores[link] = max(scores.get(link, 0), score)
+                    if link not in links_title.keys():
+                        links_title[link] = title
+                    elif len(links_title[link]) < len(title):
+                        # Duplicate link found, update title if longer
+                        links_title[link] = title
+                    # Update link quality if specified in title
+                    links_quality[link] = min(links_quality.get(link, 4), quality)
         # Sort links by quality
         for i in range(LQ_1080p60, LQ_OTHER + 1):
             for link,quality in links_quality.items():
