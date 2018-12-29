@@ -8,6 +8,10 @@ except:
     def log(msg):
         print(msg)
 
+# Cache decorator setup
+from cachetools import cached, TTLCache
+cache = TTLCache(maxsize=300, ttl=600)
+
 sys.setdefaultencoding("utf-8")
 
 CLIENT_ID = 'J_0zNv7dXM1n3Q'
@@ -25,6 +29,14 @@ class SubRedditEvents(object):
                               password=password,
                             )
         self.as_regex = re.compile(self.as_regex_str, re.IGNORECASE)
+
+    @cached(cache)
+    def client_get(self, path):
+        return self.client.get(path)
+
+    @cached(cache)
+    def client_submission(self, submission_id):
+        return self.client.submission(submission_id)
 
     @staticmethod
     def get_as_links(body):
@@ -59,7 +71,7 @@ class SubRedditEvents(object):
     @staticmethod
     def collapse(entries):
         """
-        Collapse oure list of acestream entries to pick only one with the best
+        Collapse our list of acestream entries to pick only one with the best
         quality text
         """
         results = []
@@ -74,7 +86,7 @@ class SubRedditEvents(object):
     def get_events(self, subreddit, filtering=False):
         subs = []
         path = '/r/{}'.format(subreddit)
-        for submission in self.client.get(path):
+        for submission in self.client_get(path):
             sub_id = submission.id
             score = submission.score
             title = submission.title
@@ -83,7 +95,7 @@ class SubRedditEvents(object):
         return sorted(subs, key=lambda d: d['score'], reverse=True)
 
     def get_event_links(self, submission_id):
-        submission = self.client.submission(id=submission_id)
+        submission = self.client_submission(submission_id)
         links = []
         scores = {}
         # Add the extracted links and details tuple
