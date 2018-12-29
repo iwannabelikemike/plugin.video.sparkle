@@ -10,7 +10,6 @@ from xbmcplugin import addDirectoryItem, endOfDirectory
 
 from resources.lib.modules.addon import Addon
 from resources.lib.modules import routing
-from resources.lib.modules import cache
 from resources.lib.modules.log_utils import log
 from resources.lib.modules.subreddit_lists import streaming_subreddits
 
@@ -41,6 +40,10 @@ def index():
             plugin.handle,
             plugin.url_for(show_subreddit, sr['url']),
             ListItem(sr['name']), True)
+    addDirectoryItem(
+        plugin.handle,
+        plugin.url_for(all),
+        ListItem('All Currently Playing'), True)
     endOfDirectory(plugin.handle)
 
 @plugin.route('/subreddit/<subreddit_id>')
@@ -78,6 +81,22 @@ def play():
         xbmc.executebuiltin(AS_LAUNCH_LINK.format(url=stream_url, name='sparkle'))
     except Exception as inst:
         log(inst)
+
+@plugin.route('/all')
+def all():
+    sre = SubRedditEvents()
+    for sr in streaming_subreddits:
+        for s in sre.get_events(sr['url']):
+            # Get the number of acestreams available for this event
+            # Don't include it if there arent any available
+            events = sre.get_event_links(s['submission_id'])
+            if events and len(events) > 0:
+                title = "[{}] {} ({} Streams)".format(sr['name'], s['title'], len(events))
+                addDirectoryItem(
+                    plugin.handle,
+                    plugin.url_for(show_event, s['submission_id']),
+                    ListItem(title), True)
+    endOfDirectory(plugin.handle)
 
 if __name__ == '__main__':
     plugin.run()
