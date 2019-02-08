@@ -1,10 +1,10 @@
 
 streaming_subreddits = [
-{'name': 'Soccer Streams EPL', 'url': 'soccerstreams_pl'},
-{'name': 'Soccer Streams Other', 'url': 'soccerstreams_other'},
+{'name': 'Soccer Streams', 'url': 'redditsoccer'},
 {'name': 'MMA Streams', 'url': 'MMAStreams'},
 {'name': 'NFL Streams', 'url': 'NFLStreams'},
 {'name': 'NBA Streams', 'url': 'nbastreams'},
+{'name': 'Cricket Streams', 'url': 'cricketstreams'},
 {'name': 'NCAA BBall Streams', 'url': 'ncaaBBallStreams'},
 {'name': 'CFB Streams', 'url': 'CFBStreams'},
 {'name': 'NHL Streams', 'url': 'NHLStreams'},
