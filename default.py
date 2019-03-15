@@ -4,14 +4,14 @@ import sys,os
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-import xbmc
-from xbmcgui import ListItem
+import xbmc, xbmcgui
+from xbmcgui import ListItem, Dialog
 from xbmcplugin import addDirectoryItem, endOfDirectory
 
 from resources.lib.modules.addon import Addon
 from resources.lib.modules import routing
 from resources.lib.modules.log_utils import log
-from resources.lib.modules.subreddit_lists import streaming_subreddits
+from resources.lib.modules.subreddit_lists import StreamingSubreddits
 
 addon = Addon('plugin.video.sparkle', sys.argv)
 addon_handle = int(sys.argv[1])
@@ -35,15 +35,36 @@ def icon_path(filename):
 
 @plugin.route('/')
 def index():
-    for sr in streaming_subreddits:
+    ss = StreamingSubreddits()
+    for (url, name) in ss.get_all():
         addDirectoryItem(
             plugin.handle,
-            plugin.url_for(show_subreddit, sr['url']),
-            ListItem(sr['name']), True)
+            plugin.url_for(show_subreddit, url),
+            ListItem(name), True)
     addDirectoryItem(
         plugin.handle,
         plugin.url_for(all),
         ListItem('All Currently Playing'), True)
+    addDirectoryItem(
+        plugin.handle,
+        plugin.url_for(settings),
+        ListItem('Subreddit Settings'), True)
+    endOfDirectory(plugin.handle)
+
+@plugin.route('/settings')
+def settings():
+    addDirectoryItem(
+        plugin.handle,
+        plugin.url_for(add_entry_dialog),
+        ListItem('Add Subreddit Entry'), True)
+    addDirectoryItem(
+        plugin.handle,
+        plugin.url_for(delete_entry_dialog),
+        ListItem('Delete Subreddit Entry'), True)
+    addDirectoryItem(
+        plugin.handle,
+        plugin.url_for(reset_entries),
+        ListItem('Reset subreddit entries to defaults'), True)
     endOfDirectory(plugin.handle)
 
 @plugin.route('/subreddit/<subreddit_id>')
@@ -85,18 +106,45 @@ def play():
 @plugin.route('/all')
 def all():
     sre = SubRedditEvents()
-    for sr in streaming_subreddits:
-        for s in sre.get_events(sr['url']):
+    ss = StreamingSubreddits()
+    for (url, name) in ss.get_all():
+        for s in sre.get_events(url):
             # Get the number of acestreams available for this event
             # Don't include it if there arent any available
             events = sre.get_event_links(s['submission_id'])
             if events and len(events) > 0:
-                title = "[{}] {} ({} Streams)".format(sr['name'], s['title'], len(events))
+                title = "[{}] {} ({} Streams)".format(name, s['title'], len(events))
                 addDirectoryItem(
                     plugin.handle,
                     plugin.url_for(show_event, s['submission_id']),
                     ListItem(title), True)
     endOfDirectory(plugin.handle)
+
+@plugin.route('/add_entry_dialog')
+def add_entry_dialog():
+    dialog = Dialog()
+    txt = dialog.input('Add new entry (subreddit)')
+    if txt:
+        log("Adding {} to favorites".format(txt))
+        ss = StreamingSubreddits()
+        ss.add_entry(txt, txt)
+
+@plugin.route('/delete_entry_dialog')
+def delete_entry_dialog():
+    ss = StreamingSubreddits()
+    dialog = Dialog()
+    entries = [i[0] for i in ss.get_all()]
+    idx = dialog.contextmenu(entries)
+    if idx >= 0:
+        url = entries[idx]
+        log("Deleting {} from favorites".format(url))
+        ss.delete_entry(url)
+
+@plugin.route('/reset_entries')
+def reset_entries():
+    log("Resetting to default favorites")
+    ss = StreamingSubreddits()
+    ss.reset_entries()
 
 if __name__ == '__main__':
     plugin.run()
