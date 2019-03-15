@@ -1,6 +1,8 @@
 ====================================================================
 Sparkle sports addon by [COLOR yellow]iwannabelikemike[/COLOR]
 ====================================================================
+v0.0.84 [2019-03-14]
+-add ability to modify subreddit list
 v0.0.83 [2018-12-28]
 -added caching of subreddit pulls
 -added "currenltly playing" section
