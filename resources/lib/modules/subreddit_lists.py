@@ -15,6 +15,16 @@ except:
     from pysqlite2 import dbapi2 as database
 
 default_streaming_subreddits = [
+    {'name': 'championsleague', 'url': 'championsleague'},
+    {'name': 'redditsoccercity', 'url': 'redditsoccercity'},
+    {'name': 'Soccer_Epls', 'url': 'Soccer_Epls'},
+    {'name': 'footballconnection', 'url': 'footballconnection'},
+    {'name': 'SoccerStreamClub', 'url': 'SoccerStreamClub'},
+    {'name': 'soccermatch_', 'url': 'soccermatch_'},
+    {'name': 'SoccerFarm', 'url': 'SoccerFarm'},
+    {'name': 'RedSoccer_EPL', 'url': 'RedSoccer_EPL'},
+    {'name': 'soccer_live_streaming', 'url': 'soccer_live_streaming'},
+    {'name': 'RedSoccer', 'url': 'RedSoccer'},
     {'name': 'MMA Streams', 'url': 'MMAStreams'},
     {'name': 'NFL Streams', 'url': 'NFLStreams'},
     {'name': 'NBA Streams', 'url': 'nbastreams'},
